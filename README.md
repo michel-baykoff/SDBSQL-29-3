@@ -94,6 +94,6 @@ select * from customer where active = '1' and (first_name = upper('Kelly') or fi
 ```
 4. В выводе переводим все в нижний регистр и заменяем 'll' на 'pp'
 ```
-select customer_id,store_id,replace(lower(first_name),"ll","pp") as first_name,lower(last_name),email,address_id,active,create_date,last_update from customer where active = '1' and (first_name = upper('Kelly') or first_name = upper('Willie'));
+select customer_id,store_id,replace(lower(first_name),"ll","pp") as first_name,lower(last_name) as last_name,email,address_id,active,create_date,last_update from customer where active = '1' and (first_name = upper('Kelly') or first_name = upper('Willie'));
 ```
 ![Один запрос](img/10.png)
